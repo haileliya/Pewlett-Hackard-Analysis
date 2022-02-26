@@ -5,7 +5,7 @@ Overview of the analysis: The purpose of this analysis was to understand how to 
 
 Results: Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed.
 
-1. First major result was the creation of a table that filtered employee data by date of birth and date of resignation. In the screenshot below you see that there are duplicates in the data because many employees may have changed titles in the company but retained the same employee number. This is a good raw dataset but needs to be cleaned. 
+1. First major result was the creation of a table that filtered employee data by date of birth and date of resignation. This is a good raw dataset but needs to be cleaned. 
 
 ![image](https://user-images.githubusercontent.com/96396696/155832365-7171bb4e-82b7-4e32-b30f-da1f3c14a54d.png)
 
