@@ -5,9 +5,12 @@ Overview of the analysis: The purpose of this analysis was to understand how to 
 
 Results: Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed.
 
-1. First major result was the creation of a table that filtered employee data by date of birth and date of resignation. This is a good raw dataset but needs to be cleaned. 
-
+1. First major result was the creation of a table that filtered employee data by date of birth and date of resignation. By adding the filter WHERE and using the date 01-01-1999 I was able to figure out a way to clean the data of duplicates without another set of code. 
+2. 
 ![image](https://user-images.githubusercontent.com/96396696/155832365-7171bb4e-82b7-4e32-b30f-da1f3c14a54d.png)
+
+However, if I was to remove the WHERE clause, then it would provide a data set in which there are duplicates, as shown in the screenshot below.
+![image](https://user-images.githubusercontent.com/96396696/155832745-f74bd1c9-72c5-4141-b6f3-c1663741f67a.png)
 
 2. The second major result was the creation of another table that removed the duplicates in the table above by using the DISTINCT ON method to pull employee numbers and ordered by number and date of resignation. 
 
