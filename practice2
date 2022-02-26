@@ -1,0 +1,64 @@
+--this is how you create a table 
+CREATE TABLE cities3 (
+  city_id SERIAL PRIMARY KEY,
+  city_name VARCHAR(30) NOT NULL,
+  state_name VARCHAR(30) NOT NULL,
+  population INT
+);
+
+-- this is how you add data to a table
+INSERT INTO cities3 (city_name, state_name, population)
+VALUES ('Alameda', 'California', 79177),
+('Mesa', 'Arizona', 496401),
+('Boerne', 'Texas', 16056),
+('Boerne', 'Texas', 16056),
+('Anaheim', 'Texas', 352497),
+('Tucson', 'Arizona', 535677),
+('Garland', 'Texas', 238002);
+
+SELECT * 
+FROM cities3
+
+--this is how you select a column from a table
+SELECT city_name 
+FROM cities3
+
+--selecting rows which are greater than some number
+SELECT city_name
+FROM cities3
+WHERE population > 50000;
+
+SELECT *
+FROM cities3
+WHERE population < 100000;
+
+SELECT city, state
+FROM cities
+WHERE state = 'Texas';
+
+--this is how you filter by two variables 
+SELECT *
+FROM cities
+WHERE population < 100000
+AND state = 'California';
+
+UPDATE cities
+SET state = 'California'
+WHERE city = 'Anaheim';
+
+SELECT * 
+FROM cities
+
+
+
+
+
+
+SELECT 
+CREATE TABLE people (
+  name VARCHAR(30) NOT NULL,
+  has_pet BOOLEAN DEFAULT false,
+  pet_type VARCHAR(10) NOT NULL,
+  pet_name VARCHAR(30),
+  pet_age INT
+);

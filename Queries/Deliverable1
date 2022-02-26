@@ -1,0 +1,42 @@
+---- DELIVERABLE 1
+SELECT employ.emp_no, employ.first_name, employ.last_name,
+	titles.to_date, titles.from_date, titles.title
+INTO retirement_titles
+FROM employees AS employ
+INNER JOIN titles AS titles
+ON (employ.emp_no = titles.emp_no)
+	WHERE employ.birth_date BETWEEN '1952-01-01' AND '1955-12-31' 
+	AND titles.to_date = '1999-01-01'
+ORDER BY employ.emp_no;
+
+DROP TABLE retirement_titles;
+SELECT * FROM retirement_titles;
+
+-- Remove duplicate rows
+SELECT DISTINCT ON (retire.emp_no) retire.emp_no,
+retire.first_name,
+retire.last_name,
+retire.title
+INTO unique_titles 
+FROM retirement_titles AS retire 
+--WHERE to_date ='1999-01-01'
+--WHERE to_date = '199-01-01'
+ORDER BY retire.emp_no ASC, retire.to_date DESC;
+
+DROP TABLE unique_titles;
+
+SELECT * FROM unique_titles;
+
+
+SELECT COUNT(ut.emp_no),
+ut.title
+INTO retiring_titles
+FROM unique_titles AS ut
+GROUP BY ut.title
+ORDER BY COUNT(ut.title) DESC;
+
+DROP TABLE retiring_titles
+SELECT * FROM retiring_titles
+----
+
+

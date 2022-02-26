@@ -1,0 +1,69 @@
+-- Drop table if exists
+DROP TABLE bird_song;
+
+-- Create new table
+CREATE TABLE bird_song (
+    english_name VARCHAR,
+    country VARCHAR,
+    latitude DEC,
+    longitude DEC
+);
+
+SELECT *
+FROM bird_song
+
+SELECT english_name 
+FROM bird_song
+WHERE country = 'United Kingdom' ; 
+
+-- Drop table if exists
+DROP TABLE wordassociation;
+-- Create table and view column datatypes
+CREATE TABLE wordassociation (
+    author INT,
+    word1 VARCHAR,
+    word2 VARCHAR,
+    source VARCHAR
+);
+
+SELECT * 
+FROM wordassociation
+--Create a query in which the data in the word1 column is stone
+SELECT *
+FROM wordassociation
+WHERE word1 = 'stone' ;
+
+--Create a query that collects all rows in which the author is within the range 0–10
+SELECT author 
+FROM wordassociation
+WHERE 
+	author >=1
+	AND author <= 10
+ORDER BY author DESC
+
+--Create a query that searches for any rows that have pie in their word1 or word2 columns.
+SELECT *
+FROM wordassociation
+WHERE 
+	word1 = 'pie' 
+	OR word2 = 'pie' ;
+
+-- Select all rows with a source of "BC"
+SELECT *
+FROM wordassociation
+WHERE source = 'BC';
+
+-- Collect all rows where the author is within the 333-335 range and has a source of "BC"
+SELECT *
+FROM wordassociation
+WHERE
+    SOURCE = 'BC'
+    AND author >= 333
+    AND author <= 335;
+
+
+
+
+
+
+SELET

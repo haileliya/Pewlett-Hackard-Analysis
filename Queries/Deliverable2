@@ -1,0 +1,22 @@
+---- DELIVERABLE 2
+SELECT DISTINCT ON (employ.emp_no)
+	employ.emp_no,
+	employ.first_name, 
+	employ.last_name, 
+	employ.birth_date,
+	de.from_date,
+	de.to_date,
+	ti.title
+INTO mentorship_eligibilty
+FROM employees as employ
+INNER JOIN dept_emp as de
+ON (employ.emp_no = de.emp_no)
+INNER JOIN titles as ti
+ON (employ.emp_no = ti.emp_no)
+WHERE (employ.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+AND (de.to_date = '1999-01-01')
+ORDER BY employ.emp_no, ti.from_date DESC;
+
+DROP TABLE mentorship_eligibility
+SELECT * FROM mentorship_eligibilty;
+
