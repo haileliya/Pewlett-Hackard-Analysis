@@ -17,6 +17,6 @@ Results: Provide a bulleted list with four major points from the two analysis de
 
 ![image](https://user-images.githubusercontent.com/96396696/155832388-062538db-d183-4e94-9d3d-c362b56fb0e3.png)
 
-4. Lastly, the table below shows employees born in the year 1965 who are eligible for mentorship. 
+4. Lastly, the screenshot  below shows the code used to identify employees born in the year 1965 who are eligible for mentorship. 
 
-
+![image](https://user-images.githubusercontent.com/96396696/155832566-3963228f-b1e0-43e7-9645-f4e32f74e3a4.png)
